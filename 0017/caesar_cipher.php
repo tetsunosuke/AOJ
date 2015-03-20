@@ -7,6 +7,7 @@ while($line=fgets(STDIN))
 }
 
 function solve($str) {
+    // この 26が現時点ではクソなのだが "abcde..." をどこに持つかで悩んだ結果捨てた
     for ($i = 0; $i < 26; $i++) {
         $decrypted = decryptString($str, $i);
         if (preg_match("/(the|this|that)/", $decrypted)) {
